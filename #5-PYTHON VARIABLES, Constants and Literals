@@ -1,0 +1,206 @@
+Video #5 
+
+PYTHON VARIABLES, Constants and Literals
+
+
+Here’s what you’ll learn in this tutorial:
+VARIABLES
+Introduction
+Variable vs Identifiers.
+Declaring and Initialization and re-declaration of variables.
+Declaring and assigning a value to a variable.
+Re-declaration and Changing the value of a variable.
+Assigning multiple values to multiple variables.
+Delete variables. 
+Local and global variables.
+Rules and Naming convention for variables.
+
+CONSTANTS
+INTRODUCTION 
+ Declaring and assigning a value to a constant in python.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Even if you think that you know a lot about Variables, Constant because you have programmed other similar programming languages, I would recommend watching this video. Variables and constants in Python are different in some aspects from other programming languages.
+VARIABLES:
+WHAT IS VARIABLE ?
+
+As the name implies, a variable is something which can change. A variable is a way of referring to a memory location used by a computer program.
+
+It is helpful to think of variables as a container that holds data which can be changed later throughout programming.
+
+
+
+
+
+
+Example:
+	pi = 3.14
+	print(pi)
+
+
+
+Variable vs Identifiers:
+
+Variables and identifiers are very often mistaken as synonyms.
+In simple terms: The name of a variable is an identifier, but a variable is "more than a name". A variable has a name, in most cases a type, a scope, and above all a value. 
+
+
+Declaring and Initialization and re-declaration of variables:
+
+  Declaring and assigning a value to a variable.
+ 	Example:
+		# Declare a variable and initialize it
+	name = “Coding Buddy!”
+	print(name)
+When you run the program, the output will be: “Coding Buddy!”
+
+  Re-declaration and Changing the value of a variable.
+Example:
+# Declare a variable and initialize it
+	name = “Coding Buddy!”
+	print(name)
+	
+	name = “CB”
+	print(name)
+
+Initially, the value of name was “Coding Buddy!”. Later it was changed to “CB”.
+
+  Assigning multiple values to multiple variables.
+	Python allows us to assign multiple values to multiple variables
+Example:
+ 
+		# Declare variables and initialize it with diff values
+name, age, city = “Coding Buddy”, 27, “Pune”
+print(“name: “ ,name)
+print(“age: “, age)
+print(“city: “, city)
+
+When you run the program, the output will be:
+name:  Coding Buddy
+age: 27
+city: Pune
+
+	If we want to assign the same value to multiple variables at once,
+	Example:
+ 
+		# Declare variables and initialize it with same value
+price = total = number = 42
+print(“price: “ ,price)
+print(“total: “, total)
+print(“number: “, number)
+
+When you run the program, the output will be:
+price:  42
+total:  42
+number: 42
+
+
+Delete variables:
+	You can also delete variable using the keyword del "variable name".
+	Example:
+ 
+		# Deleting variables
+del price
+print(price)
+
+When you run the program, the output will be:
+> print(price)
+Traceback (most recent call last):
+  File "<pyshell#28>", line 1, in <module>
+    print(price)
+NameError: name 'price' is not defined
+
+You can also delete multiple variables using the keyword del variable1, variable2.
+	Example:
+ 
+		# Deleting multiple variables
+del total, number
+print(total)
+print(number)
+
+When you run the program, the output will be:
+Traceback (most recent call last):
+  File "<pyshell#30>", line 1, in <module>
+    print(total)
+NameError: name 'total' is not defined
+
+Traceback (most recent call last):
+  File "<pyshell#31>", line 1, in <module>
+    print(number)
+NameError: name 'number' is not defined
+
+Rules and Naming convention for variables.
+variable names should have combination of letters in lowercase (a to z) or uppercase (A to Z) or digits (0 to 9) or an underscore (_).
+Don't start with a digit.
+Never use special symbols like !, @, #, $, %, etc.
+Create a name that makes sense.
+Use underscore for long_type_of_variables
+
+
+Local and global variables.
+
+In Python when you want to use the same variable for the rest of your program or module you declare it a global variable, while if you want to use the variable in a specific function or method, you use a local variable.
+
+Example:
+ 
+		# Declare global variable
+msg = "Awesome!"
+#Defining function
+def my_func():
+    msg = "Great!"      #Local variable
+    print("Python is ", msg)
+
+my_func() # calling my func function
+print("Python is ", msg)
+
+
+	When you run the program, the output will be:
+		Python is  Great!
+Python is  Awesome!
+
+GLOBAL keyword:
+Example:
+ 
+		# Declare global variable
+msg = "Great!"
+#Defining function
+def my_func():
+    global msg  #using global keyword
+    msg = "Awesome!"    #changing the value of msg  
+    print("Python is ", msg)
+
+my_func() # calling my func function
+print("Python is ", msg)
+
+
+
+	When you run the program, the output will be:
+		Python is  Awesome!
+Python is  Awesome!
+
+
+
+CONSTANTS:
+In python all variable can be changed.
+Therefore, real constant does not exist in python.
+But to indicate that variable should be treated if it were a constant.
+Naming convention is should be uppercase, where necessary separated by underscore. 
+
+Example:
+		
+PI = 3.14
+print(PI)
