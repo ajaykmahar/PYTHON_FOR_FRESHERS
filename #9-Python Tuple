@@ -1,0 +1,110 @@
+VIDEO - #9
+Python Tuple
+
+If you search on google or Youtube about Python tuples, there are tons of resources available, which can talk about the tuples and some basic operations, but they only explain half of the story, There is a lot which is going on with tuples.
+WHEN I WAS LEARNING PYTHON I WAS LOOKING FOR A VIDEO WHICH CAN EXPLAIN BEYOND “TUPLE IS IMMUTABLE”  BUT UNFORTUNATELY I COUN’T FIND ANY, SO I HAVE CREATED THIS FOR ALL WHO ARE LEARNING PYTHON PROGRAMMING AND MYSELF. 
+So WHY YOU SHOULD WATCH THIS VIDEO LET’S TAKE A LOOK.
+Topics:
+What is tuple
+How to create tuples 
+How to access elements from  tuple
+How to perform assignment and deletion
+Concatenations
+Tuple methods and functions
+Tuple membership
+How to iterate/Looping through a tuple.
+TIPS: 
+Packing and unpacking
+Unpacking with dummy variable (_) [pythonic way to ignore]
+How to use extended unpacking (*_)
+We can declare tuple without () but there are some special cases where we have to provide () to work program in certain way.
+
+
+
+
+WHAT IS a TUPLE ?
+Tuple is another data structure in Python which holds the sequence of data like list, it has most the property like a list but both are different in one way to another.
+Creating a Tuple
+A tuple is created by placing all the items (elements) inside parentheses (), separated by commas. The parentheses are optional, however, it is a good practice to use them
+# Empty tuple
+# Tuple having integers
+# Tuple having Strings
+# tuple with mixed datatypes
+#tuple of string and list
+#tuple inside another tuple / nested tuple
+#Tuple with single element
+
+How to access tuple elements
+Tuples are actually ordered sequences just like list and strings, so they can be easily extracted using indexing and slicing. 
+Indexing
+Negative Indexing
+Slicing
+
+
+
+Tuple assignment
+Unlike lists, tuples are immutable.
+This means that elements of a tuple cannot be changed once it has been assigned. But, if the element is itself a mutable data type like list, its nested items can be changed.
+my_tuple[1] = 9
+# TypeError: 'tuple' object does not support item assignment
+my_tuple[3][0] = 9
+# However, item of mutable element can be changed
+.
+Deleting a Tuple
+
+my_tuple = ('p','r','o','g','r','a','m','i','z')
+# can't delete items
+# TypeError: 'tuple' object doesn't support item deletion
+# del my_tuple[3]
+# Can delete an entire tuple
+del my_tuple
+# NameError: name 'my_tuple' is not defined
+print(my_tuple)
+ 
+Concatenation (+):
+a = (1,2,3)
+a += (4,5)
+
+Python Tuple Methods
+index()
+count()
+Python Tuple Functions
+len()
+max()
+min()
+sum()
+sorted()
+Tuple Membership Test
+Iterating Through a Tuple
+
+
+Tips:
+We can declare tuple without () but there are some special cases where we have to provide () to work program in certain way. 
+	def print_tuple(t):
+		for e in t:
+			print(e)
+
+	print_tuple(10,20,30) # will throw an error bca python will think these are    
+                                             3 positional arguments.
+	print_tuple((10,20,30)) we have to use () to indicate these are the tuple
+
+#tuple packing.
+	emp = (“CB”, “1992”, “12”, “27”, 10_000, )
+#tuple unpacking
+	(Name, year, month, day, salary) = emp
+#packing and unpacking without ()
+	emp = “CB”, “1992”, “12”, “27”, 10_000
+	Name, year, month, day, salary = emp
+
+#Unpacking with dummy variable (_)
+	Name, year, month, _, salary = emp
+#Extended unpacking (*_)
+Name = emp[0] 
+Year = emp[1]
+Salary = emp[4]
+There is nothing wrong with this code but it doesn’t look like a clean code and pythonic way of writing code.
+You might say we can do something like this
+Name,year,,salary = emp[0],emp[1],emp[4] 
+But this is also not the best way, the more pythonic way to do this
+name,year,*_,salary = emp
+Name, *_, salary = emp
