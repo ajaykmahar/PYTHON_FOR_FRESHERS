@@ -1,0 +1,291 @@
+Video #6
+PYTHON Literals
+
+Here’s what you’ll learn in this tutorial:
+Literals
+What are literals in python ?
+Types of literals in python ?
+Numeric Literals
+Integer
+Flot
+complex 
+string literal 
+Escape characters
+Format function with number and string literals
+Boolean literal 
+Special literal 
+Collections List literals, Tuple literals, Dict literals, and Set literals.
+
+Bonus: HOW VARIABLES ASSIGNMENT IMPLEMENTED AND WORKS INTERNALLY. 
+
+
+Literals:
+Literal is a raw data given in a variable or constant. Python literals can be defined as a data given to a variable. In Python, there are various types of literals
+
+Numeric Literals:
+Numeric Literals are immutable (unchangeable). Numeric literals can belong 
+to 3 different numerical types Integer, Float and Complex. 
+
+
+
+
+
+
+
+
+
+
+
+Example:
+
+a = 0b1010  # Binary Literals
+b = 100  # Decimal Literal
+c = 0o310  # Octal Literal
+d = 0x12C  # Hexadecimal Literal
+e = -10  # negative Decimal Literal
+
+print("######## Integer Literals ###########")
+
+# printing values
+print(a, b, c, d, e)
+
+######## Integer Literals ###########
+10 100 200 300
+We assigned integer literals into different variables. Here, a is binary literal, b is a decimal literal, c is an octal literal and d is a hexadecimal literal.
+It can be positive and negative both format.
+When we print the variables, all the literals are converted into decimal values.
+
+
+# Float Literal
+float_1 = 10.5
+float_2 = 1.5e2
+float_1 = -10.5
+
+print("######## Floating Literals ###########")
+# printing values
+print(float_1, float_2)
+
+######## Floating Literals ###########
+10.5 150.0
+10.5 and 1.5e2 are floating point literals. 1.5e2 is expressed with exponential and is equivalent to 1.5 * 10^2.
+Floating numbers can be positive and negative 
+
+# Complex Literal
+x = 10 + 3.14j
+
+print("######## Complex Literals ###########")
+print(x, x.imag, x.real)
+
+######## Complex Literals ###########
+<class 'complex'>
+(10+3.14j) 3.14 10.0
+
+We assigned a complex literal i.e 3.14j in variable x. Then we use imaginary literal (x.imag) and real literal (x.real) to create imaginary and real part of complex number.
+When you run the program, the output will be:
+
+
+String literal: 
+A string literal is a sequence of characters surrounded by quotes.
+We can use both single, double or triple quotes for a string.
+
+Example:
+	# string literals
+name = 'coding buddy'
+group = "coding"
+multiline_string = """This is a multiline string example."""
+
+var1 = “python”
+var2 = ‘python’
+Var1 == var2
+# printing values
+print(name)
+print(group)
+print(multiline_string)
+
+Escape characters
+Escape character used to escape the character, and have some special meaning.
+We represents escape characters using backslash “\”
+	\n
+	\t
+	var = r“python \n programming”
+R means raw data. Python interpreter will skip the escape character use as a raw data.
+	\\
+
+Print strings with ‘ single quote. 
+print(“This is coding buddy’s video”)
+print(‘This is coding buddy\’s video’)
+
+Print string with double quote “”
+print(‘“this is another example”’)
+print(“\“this is another example\”’)
+
+
+
+Format function with number literals
+	format (value, specifier) 
+
+Examples:
+	format (42/3, “.2f”)	
+	format (42/3, “.3f”)
+
+We can print any numbers with octal, hexadecimal, and binary format
+Using “o”, “x” and “b” specifiers.
+
+	format(200, “o”) ----- octal format
+	format(0o310, “0”) -- digit format
+	
+	format(300, “x”) ------ hexadecimal format
+format(0x12C, “0”)--- digit format
+
+format(300, “b”) ---- binary format
+format(100101100, “0”)---digit format
+format(1400000000, “,”)
+
+
+Format function using string literals
+	format("python", "<70") --- left alignment
+	format("python", ">70")---- right alignment 
+	format("python", "^70")----- center alignment
+
+
+Formating any given string 
+Format string using positional arguments 
+
+	print("Welcome! {0} let's learn {1}".format("coding buddy", "format function."))
+
+print("Welcome! {0} this is {1} video of python tutorials".format("coding buddy", 6))
+
+Format string using keyword arguments
+
+print("Welcome! {name} this is {no} video of python tutorials".format(name="coding buddy", no=6))
+	
+Boolean literal:
+A Boolean literal can have any of the two values: True or False.
+Python, True represents the value as 1 and False as 0.
+
+Example:
+print("######### Boolean Literals #############")
+is_true = True
+is_false = False
+
+# printing values
+print(is_true)
+print(is_false)
+
+# True and False represent 1 and 0 internally
+true_value = 0 + True
+false_value = 0 + False
+
+# printing values
+print(true_value)
+print(false_value)
+
+
+Special literal:
+ Python contains one special literal i.e. None. It simply means it is nothing, and has no behaviour.
+
+Example:
+
+print("######### None Literals #############")
+none = None
+
+# printing values
+print(none)
+
+Collections List literals, Tuple literals, Dict literals, and Set literals:
+There are four different literal collections List literals, Tuple literals, Dict   literals, and Set literals.
+
+Example:
+	
+fruits = ["apple", "mango", "orange"]  # list
+numbers = (1, 2, 3)  # tuple
+alphabets = {"a": "apple", "b": "ball", "c": "cat"}  # dictionary
+vowels = {"a", "e", "i", "o", "u"}  # set
+
+print(fruits)
+print(numbers)
+print(alphabets)
+print(vowels)
+
+
+BONUS:
+
+As we have said above, the type of a variable can change during the execution of  the script. We illustrate this in our following example:
+	
+Example:
+
+	##the type of a variable can change during the execution of the script.
+i = 42  # data type is implicitly set to integer
+print(type(i))
+print(hex(id(i)))
+
+i = 42 + 0.11  # data type is changed to float
+print(type(i))
+print(hex(id(i)))
+
+i = "forty"  # and now it will be a string
+print(type(i))
+print(hex(id(i)))
+
+
+What's happening, when we make assignments?
+While it is true that a new object is created each time we have a variable that makes reference to it, 
+
+Example:
+	>>> x = 8
+>>> y = x			# y refers to the same object (				number 8) as x
+>>> x = 100       # x now refers to a different 
+object (number 100),
+                   since integers are immutable
+>>> y             # but y is still referring to the 
+same object
+
+
+there are a few notable exceptions:
+some strings
+Integers between -5 and 256 (inclusive)
+empty immutable containers (e.g. tuples)
+
+These exceptions arise as a result of memory optimization in Python implementation. After all, if two variables refer to objects with the same value, why wasting memory creating a new object for the second variable? Why not simply have the second variable refer to the same object in memory ?
+
+Example:
+
+>>> a = "python is cool!"
+>>> b = "python is cool!"
+>>> a is b
+False
+>>> x = "python"
+>>> y = "python"
+>>> x is y
+True
+
+This is a result of string interning, which allows two variables to refer to the same string object. Python automatically does this
+
+Example:
+
+>>> a = 256
+>>> b = 256
+>>> a is b
+True
+>>> a = 257
+>>> b = 257
+>>> a is b
+False
+
+The Python implementation front loads an array of integers between -5 to 256. Hence, variables referring to an integer within the range would be pointing to the same object that already exists in memory:
+
+Example:
+
+>>> t = ()
+>>> t1 =()
+>>> t is t1
+True
+>>> t = (1,)
+>>> t1 = (1,)
+>>> t is t1
+False
+
+
+
+However, for non-empty tuples, new objects are created, even though both objects have the same value:
+
