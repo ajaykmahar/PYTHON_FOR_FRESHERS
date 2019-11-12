@@ -1,0 +1,99 @@
+
+VIDEO - # 4
+---------------------------
+What to expect from this video?
+
+What is statement and Block in programming language?
+Python indentation
+WHAT ARE THE COMMON INDENTATION ERRORS
+HOW TO FIX THEM.
+Quiz 
+
+Alright, In last video We have seen python keywords and identifiers.If you have not seen that video yet,I strongly recommend you watch it first then continue with this video. YOU CAN FIND IT IN CARD SECTION.
+
+YOU WILL FIND  THESE 3 COMMON TERMS in all OTHER programming lang.
+WHICH IS 
+
+KEYWORDS & IDENTIFIERS  
+STATEMENT		
+BLOCK OR BLOCK OF CODE.	
+
+Let’s understand these terms with a simple example to get more clarity on that. In our english language, there are 26 letters, and group of letters form a word and group of words  form a sentence. If we have more than one sentence, it becomes paragraphs. 
+
+Likewise, in a programming language, we have keywords & identifiers (which are the same as WORD in ENG lang), and statements (group of keyword and identifiers), and more that one statement, become block of code.
+
+KEYWORDS & IDENTIFIERS   => ENGLISH WORDS
+STATEMENT			   => LINE CONSIST OF TWO OR MORE WORDS.
+BLOCK 			   => BLOCK CONSIST OF TWO OR MORE LINE OF 
+         STATEMENTS.  
+NOW, I believe you get the point. I hope by now you have the clarity about the keywords, identifiers, statements, and blocks in programming lang.
+
+an example
+
+    #ENGLISH         PROGRAMMING
+#----------------------------------------
+    #WORDS      => KEYWORDS AND IDENTIFIERS
+    #SENTENCE  => STATEMENT
+    #PARAGRAPH  => BLOCK OF CODE
+ 
+name = "Coding Buddy"
+ 
+ 
+def greet(name):
+    print("Welcome, {0}!".format(name))
+ 
+greet(name)
+ 
+
+
+
+NOW, Let’s move and talk about.
+PYTHON INDENTATIONS.
+It’s All About the Indentation (space, tab)
+Python use different approach to structure their code . Python programs get structured through indentation. This principle makes it easier to read and understand other people's Python code.
+
+Keep in mind that one thing which is unique to Python is that spaces/tabs actually mean something. In most programming languages, spaces or indentation are just used to make the code look better and be easier to read.
+ In Python, it is actually part of the programming language. Putting in an extra space or leaving one out where it is needed will generate an error message.
+  
+
+
+
+
+
+
+
+
+
+TYPES OF INDENTATION ERRORS
+
+IndentationError: expected an indented block
+IndentationError: unexpected indent
+IndentationError: unindent does not match any outer indentation level
+
+IndentationError: expected an indented block
+if 10 > 20:
+print("python")
+
+IndentationError: unexpected indent: (start the program with single space before [space] def <...> )
+
+ def test():
+    if 10 > 5:
+        print("test msg 1")
+        print("test msg 2")
+        return
+
+
+IndentationError: unindent does not match any outer indentation level
+
+def test():
+    if 10 > 5:
+        print("test msg 1")
+        print("test msg 2")
+      return
+
+
+So,Now you know how to fix indentation errors, IF YOU ARE GETTING ANY OTHER ERROR, LET ME KNOW IN THE COMMENT SECTION. 
+
+
+So, I have prepared simple quiz for you, Check your understanding. WE HAVE TWO FILES, FILE-A AND FILE-B, YOU HAVE TO TELL WHICH FILE’S CODE HAVING INDENTATION ERROR AND WHY ?
+I AM EXPECTING IT TO BE FAIR, NOW PAUSE THE VIDEO AND TRY TO FIND THE ERROR. AND LET ME KNOW, IF YOU SOLVED THE PROBLEM. IN THE COMMENT SECTION.
