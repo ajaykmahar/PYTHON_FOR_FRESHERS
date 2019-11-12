@@ -1,0 +1,40 @@
+VIDEO - #3
+Python Identifiers
+
+What you should expect  from this video?
+	Will understand what are Identifiers and keywords in python
+What are the Rules for writing identifiers
+Best practice, how to use them
+
+An identifier is a name given to entities like class, functions, variables, etc.
+Example 
+a = 10
+b = 20
+
+Rules for writing identifiers
+can be a combination of letters in lowercase (a to z) or uppercase (A to Z) or digits (0 to 9) or an underscore _.
+ identifier cannot start with a digit
+Keywords cannot be used as identifiers
+We cannot use special symbols like !, @, #, $, % etc. 
+
+
+We will cover best practice for writing python code like a pro,in upcomming videos, there are some set of pre define rules which every python programmers should follow. That is known as PEP8 rules. 
+If you don’t know anything about pep8 don’t worry we will conver everything in this series of videos.
+ 
+Python Keywords
+Keywords are the reserved words in Python that is used to define the syntax and structure of the Python language.
+We cannot use a keyword as a variable name, function name or any other identifier.
+keywords are case sensitive.
+keywords except True, False and None are in lowercase 
+The list of all the keywords 
+help(‘keywords’)
+
+Looking at all the keywords at once and trying to figure out what they mean might be overwhelming.
+
+Things to Remember
+Python is a case-sensitive language.(that applies to identifier and keywords both)
+Always name identifiers that make sense.
+Good idea to using an underscore for long vars, this_is_a_long_variable.
+Keywords are reserved words
+There are only 3 keywords which start with CAP letter.
+There are two methods to see keywords from pytohn intractive shell..
