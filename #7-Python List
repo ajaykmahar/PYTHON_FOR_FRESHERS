@@ -1,0 +1,178 @@
+VIDEO - #7
+Python List
+LIST
+What is list in python?
+When to use list ?
+How to create a list?
+How to access elements from a list?
+List Index
+Negative indexing
+Slicing 
+Change or add elements to a list.
+Delete or remove elements from a list.
+List Comprehension
+List Membership (for loop)
+
+In this video, we'll learn everything about Python lists, how they are created, when to use list, slicing of a list, adding or removing elements from them and so on.
+What is list in python?
+A list is a data structure in Python that is mutable or changeable.
+Ordered sequence of elements.
+Each element or value that is inside of a list is called an item.
+lists are defined by having values between square brackets [ ].
+When to use list ?
+need an ordered sequence of items
+ Want to store song playlists,
+ your browser bookmarks,
+ your emails,
+ and more.
+
+
+How to create a list?
+ list is created by placing all the items (elements) inside a square bracket [ ], separated by commas.
+# empty list
+my_list = []
+ 
+# list of integers
+my_list = [1, 2, 3]
+ 
+# list with mixed datatypes
+my_list = [1, "Hello", 3.4]
+
+colors = ['red', 'blue', 'green']
+  print len(colors)  ## 3
+
+
+Note:
+Assignment with an = on lists does not make a copy. Instead, assignment makes the two variables point to the one list in memory.
+b = colors   ## Does not copy the list
+
+len() to print number of items present inside the list.
+How to access elements from a list?
+List Index
+colors = ['red', 'blue', 'green']
+  print colors[0]    ## red
+  print colors[2]    ## green
+ 
+Negative indexing
+	colors = ['red', 'blue', 'green']
+  print colors[-1]    ## red
+  print colors[-3]    ## green
+
+Trying to access an element other that this will raise an IndexError. The index must be an integer. We can't use float or other types, this will result into TypeError.
+
+
+Slicing 
+Slicing is a process of extracting a partial data or substring from the main list or string in just one single step.
+
+In this video we are talking slicing in list perspective.
+
+The syntax of Python slice operator is fairly simple.
+
+[start:stop:steps]
+
+This operator has three flags. These are –
+“start” – it indicates the index number from where the slicing will start.
+“stop” – it implies the index number where the slicing will stop.
+“step” – it indicates the number of hops interpreter will take to slice the string.
+Note:
+Things you must take care of while using Python Slice operator.
+Each of these flags is separated by colons (:).
+All the flags must be enclosed inside a pair of square brackets ( [ ] ).
+Every Flag is an integer flag which means they accept only integer values.
+Each of these flags is optional. None of them is mandatory.
+Because all these flags are optional thus you are free to skip any of them. In case you skip any flag then the Python interpreter will use their default values. The default values for the flags are –
+Start – 0 (The starting index of the string)
+Stop – last index number of the string
+Steps – 1
+Example 1: Python Slice Operator – start
+Example 2: Python Slice Operator – start : stop
+Example 3: Python Slice Operator – start : stop : steps
+
+change or add elements to a list
+List are mutable, meaning, their elements can be changed.
+
+# mistake values
+odd = [2, 4, 6, 8]
+ 
+# change the 1st item   
+odd[0] = 1           
+ 
+# Output: [1, 4, 6, 8]
+print(odd)
+ 
+# change 2nd to 4th items
+odd[1:4] = [3, 5, 7] 
+ 
+# Output: [1, 3, 5, 7]
+print(odd)
+We can add one item to a list using append() method or add several items using extend() method.
+odd = [1, 3, 5]
+ 
+odd.append(7)
+ 
+# Output: [1, 3, 5, 7]
+print(odd)
+ 
+odd.extend([9, 11, 13])
+ 
+# Output: [1, 3, 5, 7, 9, 11, 13]
+print(odd)
+Furthermore, we can insert one item at a desired location by using the method insert() or insert multiple items by squeezing it into an empty slice of a list.
+odd = [1, 9]
+odd.insert(1,3)
+ 
+# Output: [1, 3, 9]
+print(odd
+
+delete or remove elements from a list
+We can delete one or more items from a list using the keyword del. It can even delete the list entirely.
+my_list = ['p','r','o','b','l','e','m']
+ 
+# delete one item
+del my_list[2]
+ 
+# Output: ['p', 'r', 'b', 'l', 'e', 'm']    
+print(my_list)
+ 
+# delete multiple items
+del my_list[1:5] 
+ 
+# Output: ['p', 'm']
+print(my_list)
+ 
+# delete entire list
+del my_list      
+ 
+# Error: List not defined
+print(my_list)
+We can use remove() method to remove the given item or pop() method to remove an item at the given index.
+The pop() method removes and returns the last item if index is not provided. This helps us implement lists as stacks (first in, last out data structure).
+We can also use the clear() method to empty a list.
+my_list = ['p','r','o','b','l','e','m']
+my_list.remove('p')
+ 
+# Output: ['r', 'o', 'b', 'l', 'e', 'm']
+print(my_list)
+ 
+# Output: 'o'
+print(my_list.pop(1))
+ 
+# Output: ['r', 'b', 'l', 'e', 'm']
+print(my_list)
+ 
+# Output: 'm'
+print(my_list.pop())
+ 
+# Output: ['r', 'b', 'l', 'e']
+print(my_list)
+ 
+my_list.clear()
+ 
+# Output: []
+print(my_list)
+
+List Comprehension
+List comprehension is an elegant and concise way to create new list from an existing list in Python.
+
+List Membership
+We can test if an item exists in a list or not, using the keyword in.
