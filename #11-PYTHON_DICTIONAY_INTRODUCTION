@@ -1,0 +1,125 @@
+VIDEO - #11
+Dictionaries Introduction.
+
+Introduction to dictionary
+
+Dictionary elements:
+The basic structure of a dictionary is :  KEY : VALUE
+VALUES ⇒ ANY PYTHON OBJECTS
+		IT COULD BE (INTEGERS, STRING, CUSTOM CLASSES OR INSTANCE, FUNCTION, MODULES…  any python objects.
+
+KEYS ⇒ ANY HASHABLE OBJECTS
+		NOT ALL THE OBJECTS IN PYTHON ARE HASHABLE
+		STRING ⇒ IS HASHABLE
+		LIST ⇒ IS NOT HASHABLE
+HASHTABLE REQUIRES AN OBJECT TO BE CONSTANT   
+
+IN nutshell we can say that,
+ALL THE IMMUTABLE OBJECTS ARE HASHABLE
+ALL THE MUTABLE OBJECTS ARE NOT HASHABLE
+
+
+
+PYTHON HASHABLE OBJECTS
+
+Python function ⇒ hash(obj) ⇒ some int values based on python build 32bit/64bit
+			Sys.hash_info.width
+			Exception  ⇒  TypeError: unhashable type
+
+Float, int, binary, octal, hexa, decimals, fractions, … ⇒ immutable objects
+String ⇒ immutable objects
+Frozensets ⇒ immutable objects
+Tuples ⇒ immutable objects ⇒ IIF all the objects inside the tuple are immutable ⇒ hashable
+Set,dictionary ⇒ mutable collections ⇒ not hashable
+List ⇒ mutable collections ⇒ not hashable
+Function ⇒ hashable
+Custom classes and object ⇒ MAYBE it depends how we implement classes.
+
+ 
+
+
+Creating dictionary using literals:
+This is a very common way to create dictionary. 
+
+	
+{ key1 : value1,
+  key2: value2,
+  key3: value3}
+
+{‘name’: [‘Coding’, ‘Buddy’, ],
+ (0,0): origin,
+ ‘repr’: lambda x: x**2,
+ ‘Other’: {‘name’: ‘CB’, ‘age’: 27}
+}
+ 
+KEYS ⇒  MUST BE HASHABLE OBJECTS
+VALUE⇒ COULD BE ANY OBJECTS.
+
+
+Creating dictionary: constructor
+	dict(key1=value1, key2=value2, key3=value3)
+Keys ⇒ must be a valid identifier name (think like variable name, class name, function name)
+Dictionary key will then be a string of that name
+Values ⇒ any object
+	dict(‘name’= [‘Coding’, ‘Buddy’, ],
+ (0,0)= origin,   ———————————> can’t use tuple in constructor
+ ‘repr’=lambda x: x**2,
+ ‘Other’= {‘name’: ‘CB’, ‘age’: 27}
+ ‘rept’=dict(‘name’=[‘coding’, ‘buddy’], ‘age’=28)
+)
+
+We can’t provide tuple as a key it has to be a valid identifier name for constructors.
+Value can be anything it could be list, function, dictionary and so on…..
+
+Creating dictionary: comprehensions
+ It is same like we can build a list with list comprehension,
+We have dictionary comprehension for dictionary too, it has basic syntax 
+⇒ enclosed in {}
+⇒ element must be specified as a ⇒ key : value
+IF YOU FORGOT TO SPECIFY ‘:’ IT WILL CREATE A SET.
+
+{str(i) : i ** 2 for i in range(1, 5)}
+
+Dictionary comprehension also support full syntax of comprehensions, we can use if statements inside comprehensions. 
+
+{str(i) : i ** 2 for i in range(1,10) if i % 2 == 0}
+
+
+TIPS:
+We have seen how to generate dictionary using comprehensions using this syntax.
+If you don’t want to use a dictionary, you can use this.
+d = {}
+for i in range(1,n):
+	d[i] = i ** 2
+
+but this is not a pythonic way of doing it,  dictionary comprehension is clear, simple and better way of doing it.
+d= {i: i** 2 for i in range(1,n)}	
+BUT BUT BUT, IT DOESN'T MEAN WE HAVE TO USE IT EVERY TIME, 
+WHEN THINGS ARE MORE COMPLEX YOU HAVE TO USE ANOTHER WAY OF DOING IT. let’s take a look in this example
+d={}
+url=”http://localhost/user/{id}”
+for user in range(n):
+	resp = requests.get(url.format(id=i))
+	u_json = resp.json()
+	user_age = int(u_json[‘age’])
+	If user_age >= 18:
+		user_name = u_json[‘fullname’].strip()
+		user_UUID = u_json[‘UUID’]
+		d[user_UUID] = user_name
+
+In this example I am going to retrieve some user information using some restAPI, i am checking if the user “age” is >= 18 i am going to store the userUUID as key and name as a value into our dictionary. 
+
+Even if this is doable using dictionary comprehensions but the code will look horrible, and we might lose the readability of code, that mean the code will not be easy to understand by other programmers.
+
+So don't get stuck  using a comprehension is more pythonic but for SIMPLE CASES, if it gets more complex you don't have to use it. 	
+	
+Create dictionary: fromkeys()
+Class method of dict
+Create a dictionary with specified keys, all assigned the same value
+d = dict.fromkeys(iterable, value)
+	Iterable ⇒  Any iterable, must contain the hashable elements
+Value ⇒ this is optional, default value is None.
+d = dict.formkeys([‘a’, (0,0), 10], ‘N/A’)
+We can also use the generator for that, remember it could be any iterable.
+In this example we are using generators. 
+d = dict.fromkeys((i ** 2 for i in range(1,5)), False)
