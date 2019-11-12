@@ -1,0 +1,87 @@
+VIDEO - #8
+Python List Methods
+
+Topics:
+	Methods:
+append()
+insert()
+extend()
+remove()
+clear()
+pop()
+reverse()
+sort() [ascending/descending]
+count()
+copy() [shallow copy]
+index()
+	Functions:
+sorted()
+min()
+max()
+sum()
+enumerate()
+
+This is a continuation of the previous video.
+IN previous video we have seen how to create a list, access data from a list, list slicing, add, update or delete items from a list and when to use list, introduction to list comprehension and list membership.
+
+How to get the most from this video ?
+IF you are ONLY looking for list functions/methods you can continue with this video, or if you want to clear your list concept, I would strongly recommend you to please watch previous video first and continue with this, I will put the link into card section. 
+
+List.append(item): If you want to append item at the end of the list, you can use append().
+List.insert(index, item): If you want to add item to specific location, you can use insert().
+	It takes 2 arguments
+	Index: location/position where you want to add the item.
+	Item: the value which you want to add.
+Note: it just inserted the value at position and didn’t overwrite anything.
+Now another way of adding values to a list. Using extend method, sometimes it confuses people, what it does.
+List.extend(list): We use extend function, when we have multiple values and we want to add them into a list.
+Now let’s look at how to remove some values or items from a list. One way to remove value is to use remove() method.
+List.remove(item): it expects single parameter.
+List.clear(): This method just clear the items from a list, it doesn’t take any parameter, and doesn’t return any value. 
+There is another method called pop() method. 
+List.pop(): By default this will delete the last value from the list. This is useful when we want to use list as a STACK or QUEUE.
+ 
+Now let’s look at how to reverse and sort a list, there are a couple of ways to do that.
+Let's say we want to reverse a list, there is a method called reverse(), which can be used to reverse a list.
+List.reverse(): it will reverse the list items.
+List.sort(): If you want to sort your list, you can use the built in sort method. By default it will sort the items in ascending orders. 
+String values sorted by alphabetical order, and numbers sorted numerically. 
+Let’s say you want to sort your list in descending order. 
+List.sort(reverse=True)
+
+NOTE: these methods are altering the list in place. 
+
+Let’s say we want the sorted list without altering the original list. How we can do that ?
+
+Instead of sort() method, we can use sorted() function. 
+sorted(list): this will not sort the list in place, instead it will create new list in memory and return the reference of newly created list. 
+
+NOTE: That is very useful because most of the time we don’t want to modify our list but we want sorted list to do some operations.
+
+Now let’s see some more built in functions to get min, max and sum of your list.
+You might have already used these functions but anyway let's look at those. 
+min(list)
+max(list)
+sum(list)
+
+List.count(): The count() method returns the number of occurrences of an element in a list. The count() method takes a single argument and The count() method returns the number of occurrences of an element in a list.
+
+List.copy(): The copy() method returns a shallow copy of the list.
+The copy() method doesn't take any parameters. The copy() function returns a list. It doesn't modify the original list.
+NOTE: Some people think assiging list to another variable is copy of a list, that is not TRUE. let’s try to understand it with an example.
+Copied_list = list
+In this way we are not copying the list instead we are just creating a variable and assigning reference, means copied_list var will start point to the old list (which we have already seen in the last video). 
+Now let’s see if you want to search index of any item, we can use index() method to do that.
+List.index(item): This method will return the index number of provided items, If the item is not present it will throw a Value Errors.
+
+Now let’s see how to loop through the list, if we want to access each item from the list sequentially, we can do that using for loop. 
+	for name in names:
+		print(name)
+Sometimes we want the items with the index number, in that case we can use enumerate(list) function, to get the item with index values.
+It returns index and the value both. 
+for index, name in enumerate(names):
+	print(index, name)
+List index start with 0, but if we want to start with 1 we can pass the extra parameter called start=1 into our enumerate() function.
+
+for index, name in enumerate(names, start=1)
+	print(index, name)
